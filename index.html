@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="OFF/STUDIO — a brutalist creative studio. Identity, web, motion, product. Built in Lagos. Shipped to anywhere." />
+<title>OFF/STUDIO · Brand. Web. Motion. Product.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="script.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- custom cursor -->
+<div class="cur-ring" id="curRing"></div>
+<div class="cur-dot" id="curDot"></div>
+<div id="scrollbar"></div>
+
+<!-- ===== STATUS BAR ===== -->
+<div class="bg-ink text-paper text-xs font-mono tracking-widest py-2 px-5 md:px-8 flex justify-between items-center sticky top-0 z-40">
+  <p>OFF/STUDIO · LAGOS, NG · 06.4316° N, 3.4154° E</p>
+  <div class="hidden md:flex items-center gap-3"><span class="pulse rounded-full"></span> <span>OPEN FOR Q3</span></div>
+  <p id="clock">--:--:--</p>
+</div>
+
+<!-- ===== NAV ===== -->
+<header id="nav" class="nav-blur sticky top-7 z-30 border-b border-line">
+  <div class="max-w-[100rem] mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
+    <a href="#" class="font-mono font-bold text-lg tracking-tight">OFF<span class="text-acid bg-ink px-1">/</span>STUDIO</a>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-mono uppercase tracking-widest">
+      <a href="#work" class="hover:text-mute">[01] Work</a>
+      <a href="#services" class="hover:text-mute">[02] Services</a>
+      <a href="#process" class="hover:text-mute">[03] Process</a>
+      <a href="#pricing" class="hover:text-mute">[04] Pricing</a>
+      <a href="#contact" class="hover:text-mute">[05] Contact</a>
+    </nav>
+    <a href="#contact" class="hidden md:inline-flex btn-ink px-5 py-2 text-xs font-mono uppercase tracking-widest">Start a project →</a>
+    <button id="menuBtn" class="md:hidden font-mono text-xs">[MENU]</button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-line px-5 py-5 flex flex-col gap-3 font-mono uppercase text-sm">
+    <a href="#work">[01] Work</a>
+    <a href="#services">[02] Services</a>
+    <a href="#process">[03] Process</a>
+    <a href="#pricing">[04] Pricing</a>
+    <a href="#contact">[05] Contact</a>
+    <a href="#contact" class="btn-ink inline-flex justify-center px-5 py-3 mt-3">Start a project →</a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="relative px-5 md:px-8 pt-12 md:pt-20 pb-12 overflow-hidden">
+  <div class="max-w-[100rem] mx-auto">
+    <!-- meta line -->
+    <div class="reveal flex items-center justify-between mb-10 md:mb-16">
+      <p class="stamp">[ STUDIO INDEX // 2026 ]</p>
+      <p class="stamp hidden md:block">EST. 2021 / OUTPUT 047</p>
+    </div>
+
+    <!-- giant headline -->
+    <h1 class="reveal display-xl text-[20vw] md:text-[16vw] leading-[0.82]">
+      WE BUILD <br/>
+      BRANDS<span class="text-acid bg-ink inline-block px-2">/</span>SITES<br/>
+      THAT WORK<span class="inline-block w-3 h-3 md:w-6 md:h-6 bg-acid border-2 border-ink ml-2 align-middle"></span>
+    </h1>
+
+    <!-- sub block -->
+    <div class="reveal mt-10 md:mt-14 grid md:grid-cols-12 gap-6 items-end">
+      <div class="md:col-span-5">
+        <p class="stamp mb-3">// MANIFESTO_001</p>
+        <p class="text-lg md:text-xl leading-snug">A brutalist creative studio. We design identities, ship websites, cut motion, and build product — for founders who are allergic to fluff.</p>
+      </div>
+      <div class="md:col-span-3 md:col-start-7">
+        <p class="stamp mb-3">// LOCATION</p>
+        <p class="text-base">Lagos, Nigeria<br/><span class="text-mute">Working with clients in</span><br/>NYC · LDN · DXB · CPT</p>
+      </div>
+      <div class="md:col-span-3 md:col-start-10 flex md:justify-end">
+        <a href="#work" class="btn-acid px-7 py-4 text-sm font-mono uppercase tracking-widest border-2 border-ink">View work [01] →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- floating asterisks -->
+  <div class="absolute right-6 top-32 hidden md:block text-9xl text-acid font-display rotate-12 select-none pointer-events-none">✱</div>
+</section>
+
+<!-- ===== MARQUEE ===== -->
+<div class="div-thick border-b-2 border-ink py-6 md:py-8 bg-ink text-paper overflow-hidden">
+  <div class="marquee flex gap-12 whitespace-nowrap font-display text-5xl md:text-7xl leading-none">
+    <span>BRAND IDENTITY</span><span class="text-acid">✱</span>
+    <span>WEBSITE DESIGN</span><span class="text-acid">/</span>
+    <span>MOTION GRAPHICS</span><span class="text-acid">✱</span>
+    <span>PRODUCT UI</span><span class="text-acid">/</span>
+    <span>ART DIRECTION</span><span class="text-acid">✱</span>
+    <span>BRAND IDENTITY</span><span class="text-acid">/</span>
+    <span>WEBSITE DESIGN</span><span class="text-acid">✱</span>
+    <span>MOTION GRAPHICS</span><span class="text-acid">/</span>
+    <span>PRODUCT UI</span><span class="text-acid">✱</span>
+    <span>ART DIRECTION</span><span class="text-acid">/</span>
+  </div>
+</div>
+
+<!-- ===== WORK / CASE STUDIES ===== -->
+<section id="work" class="px-5 md:px-8 py-16 md:py-28">
+  <div class="max-w-[100rem] mx-auto">
+    <div class="reveal grid md:grid-cols-2 gap-6 mb-12 items-end">
+      <div>
+        <p class="sec-num text-mute mb-4">[01] / SELECTED WORK / 2024 — 2026</p>
+        <h2 class="display-xl text-6xl md:text-9xl">RECENT<br/><span class="bg-acid px-3">OUTPUT.</span></h2>
+      </div>
+      <p class="text-mute md:text-lg max-w-md md:justify-self-end">14 brands · 47 launches · 3 awards · ∞ late nights. A small selection — we keep most of the work behind NDA.</p>
+    </div>
+
+    <!-- big featured -->
+    <a href="#" class="case reveal block aspect-[16/9] mb-6 group">
+      <div class="absolute inset-0 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=2000&q=80" alt="Featured project" class="case-img w-full h-full object-cover"/>
+      </div>
+      <div class="case-content absolute inset-0 flex flex-col justify-between p-6 md:p-12">
+        <div class="flex justify-between text-sm font-mono uppercase tracking-widest text-paper group-hover:text-ink transition">
+          <span>[ CASE_001 ]</span>
+          <span>2026 · BRAND + WEB + MOTION</span>
+        </div>
+        <div>
+          <h3 class="display-xl text-5xl md:text-8xl text-paper group-hover:text-ink transition leading-none">VOLTA<br/>FINANCE</h3>
+          <p class="mt-3 text-paper/85 group-hover:text-ink/85 transition max-w-md">A full rebrand for West Africa's first wealth-tech for women. Identity, product UI, motion launch film.</p>
+        </div>
+      </div>
+    </a>
+
+    <!-- 4-col grid -->
+    <div id="caseGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+
+    <div class="reveal mt-14 text-center">
+      <a href="#" class="btn-outline-ink inline-flex px-8 py-4 text-sm font-mono uppercase tracking-widest">View archive (47 projects) →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS BAR ===== -->
+<section class="div-thick border-b-2 border-ink bg-ink text-paper py-10 md:py-14 px-5 md:px-8">
+  <div class="max-w-[100rem] mx-auto grid grid-cols-2 md:grid-cols-4 gap-y-8">
+    <div><p class="display-xl text-6xl md:text-8xl text-acid">047</p><p class="stamp text-paper/60 mt-2">Projects shipped</p></div>
+    <div><p class="display-xl text-6xl md:text-8xl">14</p><p class="stamp text-paper/60 mt-2">Active clients</p></div>
+    <div><p class="display-xl text-6xl md:text-8xl">03</p><p class="stamp text-paper/60 mt-2">Awwwards</p></div>
+    <div><p class="display-xl text-6xl md:text-8xl text-acid">∞</p><p class="stamp text-paper/60 mt-2">Cups of buna</p></div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services" class="px-5 md:px-8 py-16 md:py-28">
+  <div class="max-w-[100rem] mx-auto">
+    <div class="reveal mb-12">
+      <p class="sec-num text-mute mb-4">[02] / WHAT WE MAKE</p>
+      <h2 class="display-xl text-6xl md:text-9xl">SERVICES<br/><span class="text-acid bg-ink px-3">PROVIDED.</span></h2>
+    </div>
+
+    <div class="reveal">
+      <a href="#contact" class="service-row group flex items-center justify-between py-7 md:py-10">
+        <div class="flex items-center gap-6 md:gap-12">
+          <span class="stamp">[01]</span>
+          <h3 class="display-xl text-3xl md:text-7xl">Brand Identity</h3>
+        </div>
+        <div class="flex items-center gap-6">
+          <span class="hidden md:block text-sm text-mute group-hover:text-ink max-w-xs">Visual systems, naming, logos, brand books, voice.</span>
+          <span class="service-arrow text-3xl md:text-5xl">→</span>
+        </div>
+      </a>
+      <a href="#contact" class="service-row group flex items-center justify-between py-7 md:py-10">
+        <div class="flex items-center gap-6 md:gap-12">
+          <span class="stamp">[02]</span>
+          <h3 class="display-xl text-3xl md:text-7xl">Website Design</h3>
+        </div>
+        <div class="flex items-center gap-6">
+          <span class="hidden md:block text-sm text-mute group-hover:text-ink max-w-xs">Marketing sites, landing pages, e-commerce, microsites.</span>
+          <span class="service-arrow text-3xl md:text-5xl">→</span>
+        </div>
+      </a>
+      <a href="#contact" class="service-row group flex items-center justify-between py-7 md:py-10">
+        <div class="flex items-center gap-6 md:gap-12">
+          <span class="stamp">[03]</span>
+          <h3 class="display-xl text-3xl md:text-7xl">Motion + Film</h3>
+        </div>
+        <div class="flex items-center gap-6">
+          <span class="hidden md:block text-sm text-mute group-hover:text-ink max-w-xs">Brand films, launch reels, animated systems, social cuts.</span>
+          <span class="service-arrow text-3xl md:text-5xl">→</span>
+        </div>
+      </a>
+      <a href="#contact" class="service-row group flex items-center justify-between py-7 md:py-10">
+        <div class="flex items-center gap-6 md:gap-12">
+          <span class="stamp">[04]</span>
+          <h3 class="display-xl text-3xl md:text-7xl">Product UI/UX</h3>
+        </div>
+        <div class="flex items-center gap-6">
+          <span class="hidden md:block text-sm text-mute group-hover:text-ink max-w-xs">App and SaaS interfaces, design systems, prototyping.</span>
+          <span class="service-arrow text-3xl md:text-5xl">→</span>
+        </div>
+      </a>
+      <a href="#contact" class="service-row group flex items-center justify-between py-7 md:py-10">
+        <div class="flex items-center gap-6 md:gap-12">
+          <span class="stamp">[05]</span>
+          <h3 class="display-xl text-3xl md:text-7xl">Art Direction</h3>
+        </div>
+        <div class="flex items-center gap-6">
+          <span class="hidden md:block text-sm text-mute group-hover:text-ink max-w-xs">Campaigns, lookbooks, photoshoots, editorial systems.</span>
+          <span class="service-arrow text-3xl md:text-5xl">→</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MANIFESTO STRIP ===== -->
+<section class="manifesto-strip py-14 md:py-20 px-5 md:px-8 bg-acid">
+  <div class="max-w-[80rem] mx-auto reveal">
+    <p class="stamp mb-5">[ MANIFESTO_002 / FOR THE RECORD ]</p>
+    <p class="display-xl text-3xl sm:text-5xl md:text-7xl leading-[1] tracking-tight">
+      WE DON'T DO <s class="text-mute">REVISIONS-FOR-FUN</s>.<br/>
+      WE DON'T DO <s class="text-mute">TEMPLATES-DRESSED-AS-DESIGN</s>.<br/>
+      WE DO <span class="bg-ink text-acid px-3">WORK THAT MOVES NUMBERS.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section id="process" class="px-5 md:px-8 py-16 md:py-28 bg-ink text-paper">
+  <div class="max-w-[100rem] mx-auto">
+    <div class="reveal mb-12">
+      <p class="sec-num text-acid mb-4">[03] / HOW WE WORK</p>
+      <h2 class="display-xl text-6xl md:text-9xl">PROCESS<br/><span class="text-acid">/// 04 STEPS.</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-0 md:gap-0 border-2 border-paper">
+      <div class="reveal p-7 md:p-10 border-b-2 md:border-b-0 md:border-r-2 border-paper">
+        <p class="display-xl text-7xl md:text-9xl text-acid">01</p>
+        <h3 class="font-display text-2xl uppercase mt-3 mb-3">Discover</h3>
+        <p class="text-paper/65 text-sm leading-relaxed">Workshop, research, audit. We pull apart your business until we understand it like we built it.</p>
+        <p class="stamp text-paper/40 mt-4">~ 1 WEEK</p>
+      </div>
+      <div class="reveal p-7 md:p-10 border-b-2 md:border-b-0 md:border-r-2 border-paper">
+        <p class="display-xl text-7xl md:text-9xl text-acid">02</p>
+        <h3 class="font-display text-2xl uppercase mt-3 mb-3">Define</h3>
+        <p class="text-paper/65 text-sm leading-relaxed">Strategy, positioning, naming, visual direction. By the end you have a system, not a moodboard.</p>
+        <p class="stamp text-paper/40 mt-4">~ 2 WEEKS</p>
+      </div>
+      <div class="reveal p-7 md:p-10 border-b-2 md:border-b-0 md:border-r-2 border-paper">
+        <p class="display-xl text-7xl md:text-9xl text-acid">03</p>
+        <h3 class="font-display text-2xl uppercase mt-3 mb-3">Design</h3>
+        <p class="text-paper/65 text-sm leading-relaxed">Identity, web, motion, UI — built in parallel by specialists. Two iterations, locked.</p>
+        <p class="stamp text-paper/40 mt-4">~ 4-6 WEEKS</p>
+      </div>
+      <div class="reveal p-7 md:p-10">
+        <p class="display-xl text-7xl md:text-9xl text-acid">04</p>
+        <h3 class="font-display text-2xl uppercase mt-3 mb-3">Deliver</h3>
+        <p class="text-paper/65 text-sm leading-relaxed">Production-ready files, brand portal, launch support. We stay on retainer if you need us.</p>
+        <p class="stamp text-paper/40 mt-4">~ ONGOING</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section id="pricing" class="px-5 md:px-8 py-16 md:py-28">
+  <div class="max-w-[100rem] mx-auto">
+    <div class="reveal mb-12 grid md:grid-cols-2 gap-6 items-end">
+      <div>
+        <p class="sec-num text-mute mb-4">[04] / TIERS / FROM</p>
+        <h2 class="display-xl text-6xl md:text-9xl">CLEAR<br/><span class="bg-acid px-3">PRICING.</span></h2>
+      </div>
+      <p class="text-mute max-w-md md:justify-self-end md:text-right">All projects are scoped fixed-fee. No surprise invoices, no hourly games. Retainers and equity available for the right brief.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="reveal price p-7 md:p-9 flex flex-col">
+        <p class="stamp text-mute mb-6">[ TIER_01 ]</p>
+        <h3 class="font-display text-4xl uppercase mb-3">Launch</h3>
+        <p class="text-mute mb-7 text-sm">For founders pre-launch. Get on the map.</p>
+        <div class="mb-7">
+          <p class="display-xl text-6xl">₦4.2M</p>
+          <p class="stamp text-mute mt-1">FROM / FIXED FEE</p>
+        </div>
+        <ul class="space-y-3 text-sm mb-9">
+          <li class="flex gap-3"><span>→</span> Logo + visual system</li>
+          <li class="flex gap-3"><span>→</span> 5-page marketing website</li>
+          <li class="flex gap-3"><span>→</span> Brand book PDF</li>
+          <li class="flex gap-3"><span>→</span> 4 weeks delivery</li>
+        </ul>
+        <a href="#contact" class="btn-outline-ink mt-auto inline-flex justify-center px-6 py-3 text-sm font-mono uppercase tracking-widest">Start [TIER_01] →</a>
+      </div>
+
+      <div class="reveal price hl p-7 md:p-9 flex flex-col relative">
+        <span class="absolute -top-3 right-6 bg-acid text-ink px-3 py-1 stamp border-2 border-ink">★ MOST PICKED</span>
+        <p class="stamp text-paper/60 mb-6">[ TIER_02 ]</p>
+        <h3 class="font-display text-4xl uppercase mb-3">Scale</h3>
+        <p class="text-paper/70 mb-7 text-sm">For brands raising or repositioning.</p>
+        <div class="mb-7">
+          <p class="display-xl text-6xl price-acid">₦12M</p>
+          <p class="stamp text-paper/60 mt-1">FROM / FIXED FEE</p>
+        </div>
+        <ul class="space-y-3 text-sm mb-9">
+          <li class="flex gap-3"><span class="price-acid">→</span> Full identity + brand book</li>
+          <li class="flex gap-3"><span class="price-acid">→</span> 12-page website + CMS</li>
+          <li class="flex gap-3"><span class="price-acid">→</span> Launch motion film (30s)</li>
+          <li class="flex gap-3"><span class="price-acid">→</span> Photoshoot direction</li>
+          <li class="flex gap-3"><span class="price-acid">→</span> 8 weeks delivery</li>
+        </ul>
+        <a href="#contact" class="btn-acid mt-auto inline-flex justify-center px-6 py-3 text-sm font-mono uppercase tracking-widest border-2 border-paper">Start [TIER_02] →</a>
+      </div>
+
+      <div class="reveal price p-7 md:p-9 flex flex-col">
+        <p class="stamp text-mute mb-6">[ TIER_03 ]</p>
+        <h3 class="font-display text-4xl uppercase mb-3">Studio</h3>
+        <p class="text-mute mb-7 text-sm">For teams that need a dedicated studio.</p>
+        <div class="mb-7">
+          <p class="display-xl text-6xl">₦5M<span class="text-2xl">/mo</span></p>
+          <p class="stamp text-mute mt-1">RETAINER / 6-MONTH MIN</p>
+        </div>
+        <ul class="space-y-3 text-sm mb-9">
+          <li class="flex gap-3"><span>→</span> Dedicated 2-person team</li>
+          <li class="flex gap-3"><span>→</span> Weekly design sprints</li>
+          <li class="flex gap-3"><span>→</span> Unlimited revisions</li>
+          <li class="flex gap-3"><span>→</span> Slack channel + bi-weekly call</li>
+          <li class="flex gap-3"><span>→</span> Priority delivery</li>
+        </ul>
+        <a href="#contact" class="btn-outline-ink mt-auto inline-flex justify-center px-6 py-3 text-sm font-mono uppercase tracking-widest">Start [TIER_03] →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="px-5 md:px-8 py-16 md:py-28 div-thick border-b-2 border-ink">
+  <div class="max-w-[100rem] mx-auto">
+    <div class="reveal mb-14">
+      <p class="sec-num text-mute mb-4">[05] / FROM PEOPLE WHO HIRED US</p>
+      <h2 class="display-xl text-6xl md:text-9xl">PROOF.</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-0 border-2 border-ink">
+      <figure class="p-7 md:p-10 border-b-2 md:border-b-0 md:border-r-2 border-ink reveal">
+        <p class="stamp text-mute mb-5">[ T_001 ]</p>
+        <blockquote class="font-display text-2xl md:text-3xl uppercase leading-tight mb-6">"They rebuilt the brand in 6 weeks. We 4×'d signups in the next quarter."</blockquote>
+        <figcaption class="border-t border-ink pt-4 text-sm">
+          <p class="font-semibold">Aisha N. · CEO, VOLTA Finance</p>
+          <p class="stamp text-mute mt-1">FINTECH · LAGOS</p>
+        </figcaption>
+      </figure>
+      <figure class="p-7 md:p-10 border-b-2 md:border-b-0 md:border-r-2 border-ink reveal">
+        <p class="stamp text-mute mb-5">[ T_002 ]</p>
+        <blockquote class="font-display text-2xl md:text-3xl uppercase leading-tight mb-6">"Best agency we've worked with. Not even close. Designers who actually ship."</blockquote>
+        <figcaption class="border-t border-ink pt-4 text-sm">
+          <p class="font-semibold">Daniel O. · Founder, MWAKA Health</p>
+          <p class="stamp text-mute mt-1">HEALTHTECH · NAIROBI</p>
+        </figcaption>
+      </figure>
+      <figure class="p-7 md:p-10 reveal">
+        <p class="stamp text-mute mb-5">[ T_003 ]</p>
+        <blockquote class="font-display text-2xl md:text-3xl uppercase leading-tight mb-6">"They're the rare studio that takes the brief seriously and the deadlines even more."</blockquote>
+        <figcaption class="border-t border-ink pt-4 text-sm">
+          <p class="font-semibold">Tobi A. · Head of Brand, KOVA</p>
+          <p class="stamp text-mute mt-1">CONSUMER TECH · LAGOS</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section id="contact" class="px-5 md:px-8 py-16 md:py-28 bg-ink text-paper">
+  <div class="max-w-[100rem] mx-auto">
+    <div class="reveal grid md:grid-cols-2 gap-12 items-end mb-14">
+      <div>
+        <p class="sec-num text-acid mb-4">[06] / GET IN</p>
+        <h2 class="display-xl text-7xl md:text-[12rem] leading-[0.85]">GOT A<br/>BRIEF<span class="text-acid">?</span></h2>
+      </div>
+      <div>
+        <p class="text-paper/70 text-lg leading-relaxed mb-4">Tell us about it. Even half a sentence works. We respond within one business day.</p>
+        <p class="stamp text-paper/50">EMAIL · HELLO@OFFSTUDIO.NG<br/>WHATSAPP · +234 802 410 0099<br/>OFFICE · 14 BOURDILLON, IKOYI, LAGOS</p>
+      </div>
+    </div>
+
+    <form id="briefForm" class="reveal grid md:grid-cols-2 gap-x-6 gap-y-2 border-t-2 border-paper pt-8">
+      <div class="md:col-span-2 flex items-baseline gap-4 py-4 border-b border-paper/20">
+        <span class="stamp text-acid">01</span>
+        <input class="bg-transparent flex-1 text-2xl md:text-3xl placeholder-paper/40 focus:outline-none font-display uppercase tracking-tight" placeholder="MY NAME IS..." required/>
+      </div>
+      <div class="flex items-baseline gap-4 py-4 border-b border-paper/20">
+        <span class="stamp text-acid">02</span>
+        <input type="email" class="bg-transparent flex-1 text-2xl md:text-3xl placeholder-paper/40 focus:outline-none font-display uppercase tracking-tight" placeholder="EMAIL@HERE" required/>
+      </div>
+      <div class="flex items-baseline gap-4 py-4 border-b border-paper/20">
+        <span class="stamp text-acid">03</span>
+        <input class="bg-transparent flex-1 text-2xl md:text-3xl placeholder-paper/40 focus:outline-none font-display uppercase tracking-tight" placeholder="COMPANY"/>
+      </div>
+      <div class="md:col-span-2 flex items-baseline gap-4 py-4 border-b border-paper/20">
+        <span class="stamp text-acid">04</span>
+        <select class="bg-transparent flex-1 text-2xl md:text-3xl text-paper focus:outline-none font-display uppercase tracking-tight" required>
+          <option value="" class="bg-ink">I NEED...</option>
+          <option class="bg-ink">BRAND IDENTITY</option>
+          <option class="bg-ink">A WEBSITE</option>
+          <option class="bg-ink">MOTION / FILM</option>
+          <option class="bg-ink">PRODUCT UI</option>
+          <option class="bg-ink">EVERYTHING</option>
+        </select>
+      </div>
+      <div class="md:col-span-2 flex items-baseline gap-4 py-4 border-b border-paper/20">
+        <span class="stamp text-acid">05</span>
+        <textarea rows="2" class="bg-transparent flex-1 text-2xl md:text-3xl placeholder-paper/40 focus:outline-none font-display uppercase tracking-tight resize-none" placeholder="TELL US ABOUT THE PROJECT..."></textarea>
+      </div>
+      <button type="submit" class="md:col-span-2 btn-acid mt-8 px-10 py-6 font-mono uppercase tracking-widest text-sm border-2 border-paper">Submit brief →</button>
+      <p id="briefOk" class="hidden md:col-span-2 text-acid mt-4 stamp">→ BRIEF RECEIVED. WE'LL BE IN TOUCH WITHIN 24H.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== MEGA FOOTER ===== -->
+<footer class="bg-paper2 border-t-2 border-ink px-5 md:px-8 py-12 md:py-16">
+  <div class="max-w-[100rem] mx-auto">
+    <div class="grid md:grid-cols-12 gap-8 mb-12">
+      <div class="md:col-span-5">
+        <p class="font-mono font-bold text-2xl">OFF<span class="text-paper bg-ink px-1">/</span>STUDIO</p>
+        <p class="mt-4 max-w-md text-mute">A brutalist creative studio building brands and websites that move numbers. Lagos / Worldwide.</p>
+      </div>
+      <div class="md:col-span-2">
+        <p class="stamp mb-4">SITEMAP</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#work" class="hover:text-acid hover:bg-ink hover:px-1">Work</a></li>
+          <li><a href="#services" class="hover:text-acid hover:bg-ink hover:px-1">Services</a></li>
+          <li><a href="#process" class="hover:text-acid hover:bg-ink hover:px-1">Process</a></li>
+          <li><a href="#pricing" class="hover:text-acid hover:bg-ink hover:px-1">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-2">
+        <p class="stamp mb-4">SOCIAL</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-acid hover:bg-ink hover:px-1">Instagram ↗</a></li>
+          <li><a href="#" class="hover:text-acid hover:bg-ink hover:px-1">Behance ↗</a></li>
+          <li><a href="#" class="hover:text-acid hover:bg-ink hover:px-1">Dribbble ↗</a></li>
+          <li><a href="#" class="hover:text-acid hover:bg-ink hover:px-1">LinkedIn ↗</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <p class="stamp mb-4">SUBSCRIBE / NO SPAM</p>
+        <form class="flex gap-2">
+          <input type="email" placeholder="email@here" class="flex-1 bg-transparent border-b-2 border-ink py-2 placeholder-mute focus:outline-none font-mono text-sm"/>
+          <button class="btn-ink px-5 py-2 text-xs font-mono uppercase tracking-widest">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- mega type -->
+    <p class="display-xl text-[18vw] leading-[0.85] -mb-2 select-none">OFF<span class="text-acid">/</span>STUDIO</p>
+
+    <div class="mt-8 pt-6 border-t-2 border-ink flex flex-col md:flex-row justify-between text-xs font-mono uppercase tracking-widest gap-2">
+      <p>© 2026 OFF/STUDIO LTD · LAGOS, NIGERIA</p>
+      <p>BUILT WITH ATTITUDE · NO TEMPLATES INVOLVED</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
